@@ -1,0 +1,16 @@
+{
+  "name": "@microfrotend/core",
+  "version": "1.0.0",
+  "description": "Infrastructure for client-side composition, routing and communication",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Salar Rabbal (https://github.com/rabbal)",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "inversify": "5.0.5",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.6.6"
+  }
+}
