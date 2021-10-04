@@ -1,0 +1,136 @@
+[
+  {
+    "key": "shell",
+    "isDefault": true,
+    "load": {
+      "remote": {
+        "entry": "assets/apps/shell/remoteEntry.js",
+        "exposedModule": "./app",
+        "development": {
+          "entry": "http://localhost:4201/remoteEntry.js",
+          "active": false
+        }
+      }
+    },
+    "handle": {
+      "type": "angular-app",
+      "module": "AppModule",
+      "bootstrapComponent": "AppComponent"
+    }
+  },
+  {
+    "key": "shopping-cart",
+    "load": {
+      "remote": {
+        "key": "shopping_cart",
+        "entry": "assets/apps/shopping-cart/shopping-cart/remoteEntry.js",
+        "exposedModule": "./app",
+        "development": {
+          "entry": "http://localhost:4203/remoteEntry.js",
+          "active": false
+        }
+      }
+    },
+    "handle": {
+      "type": "angular-routing-app",
+      "path": "checkout",
+      "module": "AppModule"
+    },
+    "metadata": {
+      "path": "assets/apps/shopping-cart/shopping-cart/assets/metadata.json",
+      "development": {
+        "path": "http://localhost:4203/assets/metadata.json",
+        "active": false
+      }
+    }
+  },
+  {
+    "key": "user-profile",
+    "load": {
+      "remote": {
+        "key": "user_profile",
+        "entry": "assets/apps/user/user-profile/remoteEntry.js",
+        "exposedModule": "./app",
+        "development": {
+          "entry": "http://localhost:4204/remoteEntry.js",
+          "active": false
+        }
+      }
+    },
+    "handle": {
+      "type": "angular-routing-app",
+      "module": "AppModule"
+    },
+    "metadata": {
+      "path": "assets/apps/user/user-profile/assets/metadata.json",
+      "development": {
+        "path": "http://localhost:4204/assets/metadata.json",
+        "active": false
+      }
+    }
+  },
+  {
+    "key": "products",
+    "load": {
+      "remote": {
+        "entry": "assets/apps/products/remoteEntry.js",
+        "exposedModule": "./app",
+        "development": {
+          "entry": "http://localhost:4206/remoteEntry.js",
+          "active": false
+        }
+      }
+    },
+    "handle": {
+      "type": "angular-routing-app",
+      "module": "AppModule",
+      "path": ""
+    },
+    "metadata": {
+      "routes": [
+        {
+          "key": "products",
+          "path": ""
+        }
+      ]
+    }
+  },
+  {
+    "key": "tax-service",
+    "eagerLoad": true,
+    "load": {
+      "remote": {
+        "key": "tax_service",
+        "entry": "assets/apps/tax-service/remoteEntry.js",
+        "exposedModule": "./app",
+        "development": {
+          "entry": "http://localhost:4208/remoteEntry.js",
+          "active": false
+        }
+      }
+    },
+    "handle": {
+      "type": "angular-service",
+      "providers": "providers"
+    }
+  },
+  {
+    "key": "vue-app1",
+    "load": {
+      "remote": {
+        "key": "vue_app1",
+        "entry": "assets/apps/vue-app1/remoteEntry.js",
+        "exposedModule": "./app-creator",
+        "development": {
+          "entry": "http://localhost:4208/remoteEntry.js",
+          "active": false
+        }
+      }
+    },
+    "handle": {
+      "type": "vue-app",
+      "creator": "AppCreator",
+      "path": "vue-app"
+    }
+  }
+]
